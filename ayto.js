@@ -107,7 +107,8 @@ $(function() {
 				blueness = Math.pow((percent - cutoff) / (100 - cutoff),0.15);
 				redness = 0;
 			    } else {
-				redness = 1.0 - Math.pow((percent) / cutoff,2.0);
+                    redness = 0;
+                    // redness = 1.0 - Math.pow((percent) / cutoff,2.0);
 				blueness = 0;
 			    }
 			    cell.css( 'color', 'rgb(' + (255 * redness).toFixed(0) + ', 0, ' + (255 * blueness).toFixed(0) + ' )' );
