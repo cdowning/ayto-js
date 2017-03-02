@@ -1,105 +1,116 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Are you the JavaScript?</title>
     <meta name="description" content="Explore various scenarios in 'Are You The One?'">
     <meta name="author" content="Jim Fowler">
-    
+
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-    <link href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet" media="screen">    
-    <link href="style.css" rel="stylesheet" media="screen">    
-  </head>
-  <body role="document">
+    <link href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet" media="screen">
+</head>
+
+<body role="document">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Are You The JavaScript?</a>
+                <a class="navbar-brand" href="/">Are You The JavaScript?</a>
+            </div>
+            <div id="navbar" class="navbar-collapse navbar-right collapse">
+                <ul class="nav navbar-nav">
+                    <li><button id="reset-button" type="button" class="btn btn-danger navbar-btn">Reset</button></li>
+                </ul>
+                <p class="navbar-text"><span id="total-possibilities">39,916,800</span> <span id="total-possibilities-plural">possibilities remain</span><span id="total-possibilities-singular">possibility remains</span></p>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse navbar-right collapse">
-          <ul class="nav navbar-nav">
-	    <li><button id="reset-button" type="button" class="btn btn-danger navbar-btn">Reset</button></li>
-          </ul>
-	  <p class="navbar-text"><span id="total-possibilities">39,916,800</span> <span id="total-possibilities-plural">possibilities remain</span><span id="total-possibilities-singular">possibility remains</span></p>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container" role="main">
 
-      <div class="row">
-        <p>Mathematically explore scenarios from <a href"http://www.mtv.com/">MTV</a>'s television show, <a href="http://www.mtv.com/shows/are-you-the-one">Are You The One?</a></p>
-	<p>Click on the table below to force &ldquo;perfect matches&rdquo; between two people.</p>
-      </div>
-
-      <div class="row">
-	<div class="progress">
-          <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-	</div>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-12">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
+        <div class="row">
+            <p>Mathematically explore scenarios from <a href "http://www.mtv.com/">MTV</a>'s television show, <a href="http://www.mtv.com/shows/are-you-the-one">Are You The One?</a></p>
+            <p>Click on the table below to force &ldquo;perfect matches&rdquo; between two people.</p>
         </div>
-      </div>
 
-      <div class="row" style="padding: 20pt;">
-	<div class="form-horizontal">
-	  <div class="form-group">
-	    <div class="col-sm-12">
-	      <input class="form-control" id="slider" data-slider-id="ex1Slider" type="text"/>
-	    </div>
-	  </div>
-	</div>
-      </div>
+        <div class="row">
+            <div class="progress">
+                <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+            </div>
+        </div>
 
-      <div class="row" id="episodeEvents">
-      </div>
-      
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 20pt;">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input class="form-control" id="slider" data-slider-id="ex1Slider" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="episodeEvents">
+        </div>
 
 
-    </div> <!-- /container -->
+
+    </div>
+    <!-- /container -->
 
     <footer class="footer" role="contentinfo">
-      <div class="container">
-	<p>Made by <a href="https://twitter.com/kisonecat">@kisonecat</a>. Inspired by <a href="http://areuthe.blogspot.com/">Are You the One? Math</a>.  Source code available at <a href="https://github.com/kisonecat/are-you-the-javascript">GitHub</a>.</p>
-      </div>
+        <div class="container">
+            <p>Made by <a href="https://twitter.com/kisonecat">@kisonecat</a>. Inspired by <a href="http://areuthe.blogspot.com/">Are You the One? Math</a>. Source code available at <a href="https://github.com/kisonecat/are-you-the-javascript">GitHub</a>.</p>
+        </div>
     </footer>
-    
+
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
     <script src="season.js"></script>
     <script src="ayto.js"></script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-69408504-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-69408504-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
 
-</script>
-  </body>
 </html>
